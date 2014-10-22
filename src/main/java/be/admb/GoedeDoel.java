@@ -14,6 +14,9 @@ public class GoedeDoel {
 	public BigDecimal getIngezameld() {
 		return ingezameld;
 	}
+	public void storten(BigDecimal bedrag) {
+		ingezameld = ingezameld.add(bedrag);
+	}
 	
 	
 

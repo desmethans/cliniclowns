@@ -2,6 +2,8 @@ package be.admb;
 
 
 
+import java.math.BigDecimal;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,6 +21,11 @@ public class GoedeDoelTest {
 	@Test
 	public void getNaam() {
 		Assert.assertEquals("red cuba", goedeDoel.getNaam());
+	}
+	@Test
+	public void storten() {
+		goedeDoel.storten(BigDecimal.TEN);
+		Assert.assertEquals(0, goedeDoel.getIngezameld().compareTo(BigDecimal.TEN));
 	}
 	
 
