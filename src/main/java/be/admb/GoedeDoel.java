@@ -17,6 +17,16 @@ public class GoedeDoel {
 	public void storten(BigDecimal bedrag) {
 		ingezameld = ingezameld.add(bedrag);
 	}
+	@Override
+	public boolean equals(Object object) {
+		if (!(object instanceof GoedeDoel)) {
+			return false;
+		}
+		GoedeDoel anderDoel = (GoedeDoel) object;
+		return naam.equalsIgnoreCase(anderDoel.naam);
+	}
+
+	
 	
 	
 
