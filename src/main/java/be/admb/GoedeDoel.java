@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class GoedeDoel {
 	private String naam;
-	private BigDecimal ingezameld;
+	private BigDecimal ingezameld = BigDecimal.ZERO;
 	public GoedeDoel(String naam) {
 		this.naam = naam;
 	}
